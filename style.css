@@ -1,313 +1,65 @@
 
-
-
-#calculatrice{
-	width : 200px;
+#header{
+	width : 100%;
 	margin : auto;
+	margin-bottom: 20px;
+}
+
+#header h1{
+	text-align : center;
+}
+
+	/*###########################################*/
+	/* 		  		Post-it		 				 */
+	/*###########################################*/
+
+#msgPanel{
+	display : none;
+}
+
+.message{
+	padding-left : 50px;
+	padding-right : 60px;
+	
+	margin-bottom : 30px;
 	margin-top : 30px;
-	border : 2px black groove;
-	
-	color:#FFFFFF;
-	background: #444; 
-	background: linear-gradient( #555, #2C2C2C);
-	background: -webkit-linear-gradient( #555, #2C2C2C); 
-	background: -moz-linear-gradient( #555, #2C2C2C); 
-	background: -ms-linear-gradient( #555, #2C2C2C); 
-	background: -o-linear-gradient( #555, #2C2C2C); 
-	background: linear-gradient( #555, #2C2C2C);
+	text-align : justify;	
 }
 
 
-	/*###########################################*/
-	/* 		  		CSS Geolocalisation			 		 */
-	/*###########################################*/
+#msgPanel hr{
+  width : 100%;
+  margin: auto;
+  margin-bottom:5px;
 
-#geoloc{
-	width : 161px;
-	padding-right : 12px;
-	border : 2px black groove;
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
 
-	font-size: 0.8em;
-	margin-top:11px;
-	margin-left:11px;
-	
-	color:#000000;
-	background: #B0B0B0;
-	background: -webkit-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -moz-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -ms-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -o-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: linear-gradient( #D8D8D8, #B0B0B0);
-}
-
-	/*###########################################*/
-	/* 		  		CSS Ecran			 		 */
-	/*###########################################*/
-
-#screen{
-	width : 161px;
-	padding-right : 12px;
-	border : 2px black groove;
-
-	font-size: 1.8em;
-	margin-left:11px;
-	
-	color:#000000;
-	background: #B0B0B0;
-	background: -webkit-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -moz-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -ms-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: -o-linear-gradient( #D8D8D8, #B0B0B0); 
-	background: linear-gradient( #D8D8D8, #B0B0B0);
-	
-	
-}
-
-#equation{
-	width :100%;
-	color:#333;
-	font-size: 0.7em;
-	margin : 0;
-	margin-left : 5px;
-}
-
-#operateur{
-	width :12%;
-	
-	display : inline-block;
-	vertical-align : top;
-	
-	margin : 0;
-	margin-left : 5px;
-	
-	text-align : left;
-	font-size: 0.5em;
-}
-
-#result{
-	width :77%;
-	height : 40px;
-	
-	display : inline-block;
-	vertical-align : top;
-	
-	margin : 0;
-	
-	overflow-x : auto;
-	overflow-y :hidden;
-	
-	font-size: 35px;
-	text-align : right;
-}
-
-
-		/***********
-		/*ScrollBar*
-		***********/
-		
-::-webkit-scrollbar {
-    width: 12px;
-	height:5px;
-}
+ }
  
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
  
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+form{
+	margin-top : 30px;
 }
 
-	/*###########################################*/
-	/* 		  		CSS Clavier			 		 */
-	/*###########################################*/
-	
-#keyBoard{
-	width : 167px;
-	padding :3px;
-	border : 2px black groove;
-	margin-bottom:11px;
-	margin-left:11px;
-	
-	background: #C8C8C8;
+.btn{
+	margin-top : 10px;
 }
 
-#paveFunction{
-	width : 167px;
-}
-	
-#mainClav{
-	width : 167px;
-	height : 145px;
+.btn-danger{
+	margin-right : 20px;
 }
 
-#paveNum{
-	display : inline-block;
-	width : 98px;
-	height : 145px;
-	margin : 0px;
+.alert{
+	position:fixed;
+	top: 5px;
+	left: 5px;
+	display : none;
 }
-
-#paveOpe{
-	display : inline-block;
-	width : 30px;
-	height : 145px;
-}
-
-#paveControl{
-	display : inline-block;
-	width : 30px;
-	height : 145px;
-	vertical-align : top;
-}
-
-	/*###########################################*/
-	/* 		  	CSS des boutons	 		 		 */
-	/*###########################################*/
-
-		/*------------------------------*/
-		/*   		Boutons			  	*/
-		/*------------------------------*/
-
-.bouton {
-	margin-top : 1px;
-	margin-bottom : 1px;
-	padding:8px 0; 
-	display: inline-block; 
-	height : 18px;
-
-	color:#333; 
-	font-size: 1.5em;
-	text-align:center; 
-	text-decoration : none;
-	
-	border-radius:7px; 
-	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.3);
-	box-shadow: 0 0 1px rgba( 0, 0, 0, 0.2), 0 -1px 0 rgba( 255, 255, 255, 0.1); 
-}	
-	
-.bouton.regular{font-size: 0.9em; width:30px}
-
-.bouton.large{font-size: 0.9em; width:64px}	
-
-.bouton.mediumLarge{
-	font-size: 0.9em; 
-	width:38px;
-	height : 16px;
-}	
-
-.bouton.tall{
-	font-size: 1.5em; 
-	width: 30px; 
-	height : 31px;
-	padding-top : 13px;
-}
-
-
-
-		/*------------------------------*/
-		/*   	Couleurs Bouton			*/
-		/*------------------------------*/
-
-			/*=========
-				Noir
-			===========*/
-.bouton.noir, .bouton.noir:active { 
-	color:#FFFFFF;
-	background: #444; 
-	background: linear-gradient( #555, #2C2C2C);
-	background: -webkit-linear-gradient( #555, #2C2C2C); 
-	background: -moz-linear-gradient( #555, #2C2C2C); 
-	background: -ms-linear-gradient( #555, #2C2C2C); 
-	background: -o-linear-gradient( #555, #2C2C2C); 
-	background: linear-gradient( #555, #2C2C2C);
-}
-
-.bouton.noir:hover {
-	color:#E7E7E7;
-	background: #555;
-	background: -webkit-linear-gradient( #777, #333);
-	background: -moz-linear-gradient( #777, #333);
-	background: -ms-linear-gradient( #777, #333);
-	background: -o-linear-gradient( #777, #333);
-	background: linear-gradient( #777, #333);	
-}	
-
-.bouton:active{
-	color:#303030;
-	box-shadow: 3px 3px 30px #000 inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
-}
-
-			/*=========
-				Rouge
-			===========*/
-
-.bouton.rouge, .bouton.rouge:active{
-	background: #F4523D;
-	background: -webkit-linear-gradient( #F4523D, #B43300);
-	background: -moz-linear-gradient( #F4523D, #B43300);
-	background: -ms-linear-gradient( #F4523D, #B43300);
-	background: -o-linear-gradient( #F4523D, #B43300);
-	background: linear-gradient( #F4523D, #B43300);
-	}
-.bouton.rouge:hover {
-	background: #FF6A4F;
-	background: -webkit-linear-gradient( #FF6A4F, #D33B11); 
-	background: -moz-linear-gradient( #FF6A4F, #D33B11); 
-	background: -ms-linear-gradient( #FF6A4F, #D33B11); 
-	background: -o-linear-gradient( #FF6A4F, #D33B11); 
-	background: linear-gradient( #FF6A4F, #D33B11);
-	}
-.bouton.rouge:active {box-shadow: 1px 1px 10px #A83318 inset, 0 1px 0 rgba( 255, 255, 255, 0.4);}
-
-
-
-			/*=========
-				Gris
-			===========*/	
-.bouton.gris {
-	color:#FFFFFF;
-	background: #383838;
-	background: -webkit-linear-gradient( #8F8F8F, #585858);
-	background: -moz-linear-gradient( #8F8F8F, #585858);
-	background: -ms-linear-gradient( #8F8F8F, #585858);
-	background: -o-linear-gradient( #8F8F8F, #585858);
-	background: linear-gradient( #8F8F8F, #585858);
-	}	
-.bouton.gris:hover {
-	color:#E7E7E7;
-	background: #D8D8D8;
-	background: -webkit-linear-gradient( #B0B0B0, #585858); 
-	background: -moz-linear-gradient( #B0B0B0, #585858); 
-	background: -ms-linear-gradient( #B0B0B0, #585858); 
-	background: -o-linear-gradient( #B0B0B0, #585858); 
-	background: linear-gradient( #B0B0B0, #585858);
-	}
-.bouton.gris:active{box-shadow: 3px 3px 30px #585858 inset, 0 1px 0 rgba( 255, 255, 255, 0.4);}
-
-
-			/*=========
-				Orange
-			===========*/	
-.bouton.orange, .bouton.orange:active{
-	color:#0;
-	background: #FF6600;
-	background: -webkit-linear-gradient( #FF9933, #FF6600); 
-	background: -moz-linear-gradient( #FF9933, #FF6600); 
-	background: -ms-linear-gradient( #FF9933, #FF6600); 
-	background: -o-linear-gradient( #FF9933, #FF6600); 
-	background: linear-gradient( #FF9933, #FF6600);
-	}
-.bouton.orange:hover {
-	color:#0;
-	background: #3CA1D3;
-	background: -webkit-linear-gradient( #FFC15B, #FF6633);
-	background: -moz-linear-gradient( #FFC15B, #FF6633);
-	background: -ms-linear-gradient( #FFC15B, #FF6633);
-	background: -o-linear-gradient( #FFC15B, #FF6633);
-	background: linear-gradient( #FFC15B, #FF6633);
-	}
-.bouton.orange:active {box-shadow: 1px 1px 10px #FF6600 inset, 0 1px 0 rgba( 255, 255, 255, 0.4);}
 

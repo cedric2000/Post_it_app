@@ -23,7 +23,6 @@ def bad_request(error):
 def not_found(error):
     return make_response(jsonify( { 'error': 'Not Found' } ), 404)
 
-	
 @app.route('/tasks', methods = ['POST'])
 def create_task():
     if not request.json or not 'task' in request.json:
@@ -35,12 +34,9 @@ def create_task():
     tasks.append(task)
     return jsonify( { 'task': task } ), 201
 
-	
 @app.route('/tasks', methods = ['GET'])
 def get_tasks():
     return jsonify( { 'tasks': tasks } )
-
-	
 	
 @app.route('/tasks/<int:task_id>', methods = ['GET'])
 def get_task(task_id):
@@ -48,7 +44,6 @@ def get_task(task_id):
     if len(task) == 0:
         abort(404)
     return jsonify( { 'task': task[0] } )
-	
 	
 @app.route('/tasks/<int:task_id>', methods = ['PUT'])
 def update_task(task_id):
@@ -60,7 +55,6 @@ def update_task(task_id):
     task[0]['task'] = request.json.get('task', task[0]['task'])
     return jsonify( { 'task': task[0] } )
 
-	
 @app.route('/tasks/<int:task_id>', methods = ['DELETE'])
 def delete_task(task_id):
     task = filter(lambda t: t['id'] == task_id, tasks)
@@ -69,8 +63,5 @@ def delete_task(task_id):
     tasks.remove(task[0])
     return jsonify( { 'result': True } )
 
-	
 if __name__ == '__main__':
     app.run(debug = True)
-	
-	

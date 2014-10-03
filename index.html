@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 
 <html>
-    <head lang="fr">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css" />
+    <head>
+  
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Pos-it App </title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		 <!-- Index Style -->
+		<link href="style.css" rel="stylesheet">
 		
-		<title>Client-Serveur</title>
-    </head>
+	  </head>
+  
 
     <body>
 		
-		<div id="content">
-			<p id="test"> Test </p>
-			<p id="test2"> Test </p>
-		</div>	<!-- end calculatrice -->
+		<div id="header">
+			<h1>Laisse ton message</h1>
+			<hr/>
+		</div>
 		
-    </body>
+		<div class="alert col-lg-3 alert-danger">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p>L'accès au serveur est impossible. </p>
+		</div>
+		
+		<div class="container">
+		
+			<div class ="row " id="msgPanel">
+			
+			</div>
+			
+			<div class="row">
+				<form class="well">
+					<legend>Si vous voulez laisser un message</legend>
+					<fieldset>
+						<label for="textarea">Votre message :</label>
+						<textarea id="textarea" class="form-control" rows="4"></textarea>
+						<button class="btn btn-primary pull-right" id="envoyerNew" maxlength="10"><span class="glyphicon glyphicon-pencil"></span> Envoyer</button>
+					</fieldset>
+				</form>
+			</div>
+			
+		</div>   <!-- end content -->
+			
 
+		<div class="modal fade" id="editMessage">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">x</button>
+						<h4 class="modal-title" >Editer le message</h4>
+					</div>
+					
+					<div class="modal-body">
+						<textarea id="textareaEdit" class="form-control" rows="4"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary pull-right" data-dismiss="modal" id="envoyerEdit" maxlength="10"><span class="glyphicon glyphicon-pencil"></span> Envoyer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+    </body>
+ 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="appelServeur.js"></script>
 	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="appelServeur.js"></script>
+	<script src="controleurMessages.js"></script>
 
 </html>
